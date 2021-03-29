@@ -1,0 +1,347 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+//Fonts
+
+//Variables
+$code: 'Fira Code', monospace;
+$default: 'Poppins', sans-serif;
+$mobile: 768px;
+$tablet: 1100px;
+$tablet-lg: 1080px;
+$tablet-sm: 930px;
+$mobile-sm: 735px;
+$small: 540px;
+//Variables
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $default;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: #f2f2f2;
+    padding: 0;
+    margin: 0px auto;
+
+    .laoder{
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        margin: 0px auto;
+        z-index: 100;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 500ms;
+        .spinner{
+            width: 70px;
+            height: 70px;
+            border: 2px solid rgba(0,0,0,.2);
+            position: relative;
+            border-radius: 50%;
+            border-top: 2px solid #000;
+            animation: spin .4s linear infinite;
+        }
+        @keyframes spin {
+            0%{transform: rotate(0deg)}
+            100%{transform: rotate(360deg)}
+        }
+    }
+
+    .container{
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: 0px auto;
+        top: 0;
+        padding: 0;
+        .header{
+            width: 100%;
+            height: auto;
+            min-height: 100vh;
+            position: relative;
+            top: 0;
+            margin: 0px auto;
+            padding: 0px;
+            .content{
+                width: 100%;
+                min-height: 100vh;
+                background: #2b2d42;
+                height: 100vh;
+                padding: 50px;
+                margin: 0px auto;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                @media (max-width: $mobile) {
+                    padding: 20px;
+                }
+                p{
+                    color: #ffffff;
+                    position: relative;
+                    font-size: 30px;
+                    font-weight: 100;
+                    padding: 0;
+                    margin-bottom: 15px;
+                    span{
+                        font-size: 55px;
+                        font-family: $code;
+                    }
+                    i{
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size:65px;
+                    }
+                    em{
+                        font-style: normal;
+                        font-size: 50px;
+                        color: aquamarine;
+                    }
+                    small{
+                        font-size: 70px;
+                        @media (max-width: $mobile) {
+                            font-size: 60px;
+                        }
+                    }
+                }
+                .contact-btn{
+                    position: relative;
+                    text-decoration: none;
+                    color: #ffffff;
+                    font-size: 17px;
+                    letter-spacing: 1px;
+                    padding: 9px 25px;
+                    border: 1px solid #ffffff;
+                    border-radius: 2px;
+                    font-weight: 300;
+                    &::before{
+                        content: "Contact";
+                        top: 0;
+                        left: 0;
+                        color: #000;
+                        background: #fff;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #fff;
+                        clip-path: circle(0px at 100% 100%);
+                        transition: 500ms;
+                    }
+                    &:hover::before{
+                        clip-path: circle(100%);
+                    }
+                }
+            }
+        }
+        .info{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 20px 0px;
+            h1{
+                position: relative;
+                font-weight: 200;
+                font-family: $code;
+                font-size: 35px;
+                text-align: center;
+                padding: 30px 0px;
+            }
+            .logo{
+                display: flex;
+                justify-content: space-around;
+                position: relative;
+                @media (max-width: $tablet) {
+                    flex-wrap: wrap;
+                }
+                a{
+                    display: flex;
+                    position: relative;
+                    width: auto;
+                    height: auto;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 10px;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+                    width: 200px;
+                    height: 220px;
+                    align-items: center;
+                    text-decoration: none;
+                    font-weight: 100;
+                    font-size: 17px;
+                    font-family: $code;
+                    word-break: break-all;
+                    color: green;
+                    transition: 250ms;
+                    background: #f2f2f2;
+                    @media (max-width: $tablet) {
+                        width: 350px;
+                        margin-bottom: 10px;
+                    }
+                    @media (max-width: $tablet-lg) {
+                        width: 450px;
+                    }
+                    @media (max-width: $tablet-sm) {
+                        width: 350px;
+                    }
+                    @media (max-width: $mobile-sm) {
+                        width: 250px;
+                    }
+                    @media (max-width: $small) {
+                        width: 90%;
+                    }
+                    svg{
+                        width: 70px;
+                        height: auto;
+                    }
+                    &:hover{
+                        transform: translateY(-8px);
+                    }
+                }
+            }
+        }
+        .portfolio{
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin: 0px auto;
+            padding: 0;
+            h1{
+                position: relative;
+                font-size: 35px;
+                font-weight: 200;
+                text-align: center;
+                font-family: $code;
+                padding: 30px 0px;
+            }
+            .works{
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                //flex-wrap: wrap;
+                margin-bottom: 20px;
+                @media (max-width: $tablet) {
+                    flex-wrap: wrap;
+                }
+                .box{
+                    width: 300px;
+                    height: 400px;
+                    background: #f2f2f2;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+                    border-radius: 3px;
+                    transition: 300ms;
+                    overflow: hidden;
+                    @media (max-width: $tablet) {
+                        width: 500px;
+                        margin-bottom: 15px;
+                        height: 600px;
+                    }
+                    @media (max-width: $tablet-sm) {
+                        width: 400px;
+                    }
+                    @media (max-width: $mobile) {
+                        width: 90%;
+                    }
+                    img{
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        overflow: hidden;
+                        z-index: 1;
+                    }
+                    &:hover{
+                        transform: translateY(-7px);
+                    }
+                }
+            }
+        }
+        .contact{
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding: 0;
+            margin-bottom: 0px auto;
+            h1{
+                position: relative;
+                font-size: 35px;
+                font-weight: 200;
+                text-align: center;
+                font-family: $code;
+                padding: 30px 0px;
+            }
+            .links{
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 0;
+                margin-bottom: 0px auto;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+                flex-wrap: wrap;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    text-decoration: none;
+                    font-size: 65px;
+                    width: 200px;
+                    height: 200px;
+                    background: #f2f2f2;
+                    border: 1px solid rgba(0,0,0,.1);
+                    margin: 0px 20px;
+                    border-radius: 5px;
+                    color: #000;
+                    transition: 300ms;
+                    @media (max-width: $tablet-lg) {
+                        margin: 0px 5px;
+                    }
+                    @media (max-width: $tablet-sm) {
+                        margin: 20px;
+                        width: 300px;
+                    }
+                    @media (max-width: $mobile-sm) {
+                        width: 200px;
+                    }
+                    @media (max-width: $small) {
+                        width: 150px;
+                        height: 150px;
+                    }
+                    &:hover{
+                        box-shadow: 0px 0px 15px rgba(0,0,0,.2);
+                        border: 1px solid #f2f2ff;
+                    }
+                }
+            }
+        }
+        .footer{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            background: #000;
+            color: #f2f2f2;
+            margin-top: 40px;
+        }
+    }
+}
