@@ -173,6 +173,7 @@ body .container .header .content .contact-btn {
 body .container .header .content .contact-btn::before {
   content: "Contact";
   top: 0;
+  border-radius: 2px;
   left: 0;
   color: #000;
   background: #fff;
