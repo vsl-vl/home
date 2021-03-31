@@ -177,6 +177,7 @@ body .container .header .content .contact-btn::before {
   left: 0;
   color: #000;
   background: #fff;
+  box-sizing: border-box;
   position: absolute;
   width: 100%;
   height: 100%;
