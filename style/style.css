@@ -168,6 +168,8 @@ body .container .header .content .contact-btn {
   border: 1px solid #ffffff;
   border-radius: 2px;
   font-weight: 300;
+  transition: 200ms;
+  transition-delay: 120ms;
 }
 
 body .container .header .content .contact-btn:hover{
